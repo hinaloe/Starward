@@ -86,7 +86,7 @@ internal class IssueEventProcessor : WebhookEventProcessor
                 issueUpdate.AddLabel("invalid");
                 issueUpdate.State = ItemState.Closed;
                 issueUpdate.StateReason = ItemStateReason.NotPlanned;
-                await _client.Issue.Comment.Create(issuesEvent.Repository.Id, (int)issuesEvent.Issue.Number, "This issue would be closed for no title or content.");
+                await _client.Issue.Comment.Create(issuesEvent.Repository.Id, (int)issuesEvent.Issue.Number, "This issue will be closed for no title or content.");
                 await _client.Issue.Update(issuesEvent.Repository.Id, (int)issuesEvent.Issue.Number, issueUpdate);
             }
         }
@@ -109,7 +109,7 @@ internal class IssueEventProcessor : WebhookEventProcessor
                 var issueUpdate = issue.ToUpdate();
                 issueUpdate.State = ItemState.Closed;
                 issueUpdate.StateReason = ItemStateReason.NotPlanned;
-                await _client.Issue.Comment.Create("Scighost", "Starward", (int)issuesEvent.Issue.Number, "This issue would be closed for something invalid.");
+                await _client.Issue.Comment.Create("Scighost", "Starward", (int)issuesEvent.Issue.Number, "This issue will be closed for something invalid.");
                 await _client.Issue.Update(issuesEvent.Repository.Id, (int)issuesEvent.Issue.Number, issueUpdate);
             }
             if (issuesEvent.Issue.Labels.Any(x => x.Name is "duplicate"))
@@ -118,7 +118,7 @@ internal class IssueEventProcessor : WebhookEventProcessor
                 var issueUpdate = issue.ToUpdate();
                 issueUpdate.State = ItemState.Closed;
                 issueUpdate.StateReason = ItemStateReason.NotPlanned;
-                await _client.Issue.Comment.Create("Scighost", "Starward", (int)issuesEvent.Issue.Number, "This issue would be closed for duplicate.");
+                await _client.Issue.Comment.Create("Scighost", "Starward", (int)issuesEvent.Issue.Number, "This issue will be closed for duplicate.");
                 await _client.Issue.Update(issuesEvent.Repository.Id, (int)issuesEvent.Issue.Number, issueUpdate);
             }
         }
