@@ -1,0 +1,6 @@
+@Starward.Dashboard.Server_HostAddress = http://localhost:20544
+
+GET {{Starward.Dashboard.Server_HostAddress}}/api/info
+Accept: application/json
+
+###
