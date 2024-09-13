@@ -230,6 +230,8 @@ public sealed partial class HoyolabToolboxPage : PageBase
         if (CurrentGameBiz.ToGame() is GameBiz.ZZZ)
         {
             NavigationViewItem_BattleChronicle.Visibility = Visibility.Visible;
+            // ZZZ战绩图片
+            // Image_BattleChronicle.Source = new BitmapImage(new Uri("ms-appx:///Assets/Image/f6b98a6c8d6a6fd69f75943d0c09b74b_3210884535876864057.png"));
         }
     }
 
