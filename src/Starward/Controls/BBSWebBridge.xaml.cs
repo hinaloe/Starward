@@ -645,19 +645,19 @@ public sealed partial class BBSWebBridge : UserControl
     private class JsParam
     {
         /// <summary>
-        /// æ–¹æ³•åç§°
+        /// ·½·¨Ãû³Æ
         /// </summary>
         [JsonPropertyName("method")]
         public string Method { get; set; }
 
         /// <summary>
-        /// æ•°æ® å¯ä»¥ä¸ºç©º
+        /// Êı¾İ ¿ÉÒÔÎª¿Õ
         /// </summary>
         [JsonPropertyName("payload")]
         public JsonNode? Payload { get; set; }
 
         /// <summary>
-        /// å›è°ƒçš„åç§°ï¼Œè°ƒç”¨ JavaScript:mhyWebBridge æ—¶ä½œä¸ºé¦–ä¸ªå‚æ•°ä¼ å…¥
+        /// »Øµ÷µÄÃû³Æ£¬µ÷ÓÃ JavaScript:mhyWebBridge Ê±×÷ÎªÊ×¸ö²ÎÊı´«Èë
         /// </summary>
         [JsonPropertyName("callback")]
         public string? Callback { get; set; }
@@ -668,19 +668,19 @@ public sealed partial class BBSWebBridge : UserControl
     private class JsResult
     {
         /// <summary>
-        /// ä»£ç 
+        /// ´úÂë
         /// </summary>
         [JsonPropertyName("retcode")]
         public int Code { get; set; }
 
         /// <summary>
-        /// æ¶ˆæ¯
+        /// ÏûÏ¢
         /// </summary>
         [JsonPropertyName("message")]
         public string Message { get; set; } = string.Empty;
 
         /// <summary>
-        /// æ•°æ®
+        /// Êı¾İ
         /// </summary>
         [JsonPropertyName("data")]
         public Dictionary<string, object> Data { get; set; } = default!;
